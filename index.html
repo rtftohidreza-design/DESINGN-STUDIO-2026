@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NovaAI — All-in-One AI Tools</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    <span>✦</span> NovaAI
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tools">AI Tools</a>
+    <a href="#categories">Categories</a>
+    <a href="#pricing">Pricing</a>
+  </nav>
+
+  <button class="start-btn" onclick="scrollToTools()">
+    Start Creating
+  </button>
+
+</header>
+
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      ✨ All-in-One AI Platform
+    </div>
+
+    <h1>
+      One place for
+      <span>all your AI tools.</span>
+    </h1>
+
+    <p>
+      Create images, write content, generate videos,
+      make logos, edit photos, create code and much more
+      with NovaAI.
+    </p>
+
+    <div class="search">
+
+      <span>⌕</span>
+
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search AI tools..."
+        oninput="searchTools()"
+      >
+
+    </div>
+
+    <div class="quick-tools">
+
+      <button onclick="openTool('AI Image Generator')">
+        🎨 Image
+      </button>
+
+      <button onclick="openTool('AI Writer')">
+        ✍️ Writer
+      </button>
+
+      <button onclick="openTool('AI Video Generator')">
+        🎬 Video
+      </button>
+
+      <button onclick="openTool('AI Logo Maker')">
+        ✦ Logo
+      </button>
+
+      <button onclick="openTool('AI Code Generator')">
+        💻 Code
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="categories" id="categories">
+
+  <div class="section-title">
+
+    <span>EXPLORE</span>
+
+    <h2>AI Tools for everything</h2>
+
+    <p>
+      Choose a category and find the perfect AI tool.
+    </p>
+
+  </div>
+
+
+  <div class="category-buttons">
+
+    <button onclick="filterCategory('all')">
+      All Tools
+    </button>
+
+    <button onclick="filterCategory('image')">
+      🎨 Image
+    </button>
+
+    <button onclick="filterCategory('writing')">
+      ✍️ Writing
+    </button>
+
+    <button onclick="filterCategory('video')">
+      🎬 Video
+    </button>
+
+    <button onclick="filterCategory('audio')">
+      🎧 Audio
+    </button>
+
+    <button onclick="filterCategory('business')">
+      💼 Business
+    </button>
+
+    <button onclick="filterCategory('marketing')">
+      📢 Marketing
+    </button>
+
+    <button onclick="filterCategory('code')">
+      💻 Coding
+    </button>
+
+    <button onclick="filterCategory('education')">
+      🎓 Education
+    </button>
+
+  </div>
+
+</section>
+
+
+<section class="tools" id="tools">
+
+  <div class="tools-grid">
+
+
+    <!-- IMAGE TOOLS -->
+
+    <div class="tool-card image">
+
+      <div class="icon">🎨</div>
+
+      <span class="tag">IMAGE</span>
+
+      <h3>AI Image Generator</h3>
+
+      <p>
+        Create images from simple text prompts.
+      </p>
+
+      <button onclick="openTool('AI Image Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card image">
+
+      <div class="icon">🖼️</div>
+
+      <span class="tag">IMAGE</span>
+
+      <h3>AI Photo Editor</h3>
+
+      <p>
+        Remove backgrounds, objects and enhance photos.
+      </p>
+
+      <button onclick="openTool('AI Photo Editor')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card image">
+
+      <div class="icon">✦</div>
+
+      <span class="tag">IMAGE</span>
+
+      <h3>AI Logo Maker</h3>
+
+      <p>
+        Generate professional logos for brands.
+      </p>
+
+      <button onclick="openTool('AI Logo Maker')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card image">
+
+      <div class="icon">🪄</div>
+
+      <span class="tag">IMAGE</span>
+
+      <h3>Background Remover</h3>
+
+      <p>
+        Automatically remove image backgrounds.
+      </p>
+
+      <button onclick="openTool('Background Remover')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card image">
+
+      <div class="icon">✨</div>
+
+      <span class="tag">IMAGE</span>
+
+      <h3>AI Image Upscaler</h3>
+
+      <p>
+        Improve image resolution and quality.
+      </p>
+
+      <button onclick="openTool('AI Image Upscaler')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card image">
+
+      <div class="icon">👤</div>
+
+      <span class="tag">IMAGE</span>
+
+      <h3>AI Avatar Generator</h3>
+
+      <p>
+        Create unique AI avatars and profile pictures.
+      </p>
+
+      <button onclick="openTool('AI Avatar Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card image">
+
+      <div class="icon">📝</div>
+
+      <span class="tag">IMAGE</span>
+
+      <h3>AI Poster Maker</h3>
+
+      <p>
+        Generate posters for events and businesses.
+      </p>
+
+      <button onclick="openTool('AI Poster Maker')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card image">
+
+      <div class="icon">📱</div>
+
+      <span class="tag">IMAGE</span>
+
+      <h3>Social Media Design</h3>
+
+      <p>
+        Create Instagram, Facebook and social graphics.
+      </p>
+
+      <button onclick="openTool('Social Media Design')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <!-- WRITING TOOLS -->
+
+    <div class="tool-card writing">
+
+      <div class="icon">✍️</div>
+
+      <span class="tag">WRITING</span>
+
+      <h3>AI Writer</h3>
+
+      <p>
+        Write articles, posts and professional content.
+      </p>
+
+      <button onclick="openTool('AI Writer')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card writing">
+
+      <div class="icon">📄</div>
+
+      <span class="tag">WRITING</span>
+
+      <h3>AI Article Writer</h3>
+
+      <p>
+        Generate long-form articles with AI.
+      </p>
+
+      <button onclick="openTool('AI Article Writer')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card writing">
+
+      <div class="icon">📧</div>
+
+      <span class="tag">WRITING</span>
+
+      <h3>Email Writer</h3>
+
+      <p>
+        Create professional emails instantly.
+      </p>
+
+      <button onclick="openTool('Email Writer')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card writing">
+
+      <div class="icon">🔄</div>
+
+      <span class="tag">WRITING</span>
+
+      <h3>AI Rewriter</h3>
+
+      <p>
+        Rewrite and improve existing text.
+      </p>
+
+      <button onclick="openTool('AI Rewriter')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card writing">
+
+      <div class="icon">✓</div>
+
+      <span class="tag">WRITING</span>
+
+      <h3>Grammar Checker</h3>
+
+      <p>
+        Fix grammar, spelling and sentence errors.
+      </p>
+
+      <button onclick="openTool('Grammar Checker')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card writing">
+
+      <div class="icon">📋</div>
+
+      <span class="tag">WRITING</span>
+
+      <h3>AI Summarizer</h3>
+
+      <p>
+        Summarize long text into simple points.
+      </p>
+
+      <button onclick="openTool('AI Summarizer')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <!-- VIDEO -->
+
+    <div class="tool-card video">
+
+      <div class="icon">🎬</div>
+
+      <span class="tag">VIDEO</span>
+
+      <h3>AI Video Generator</h3>
+
+      <p>
+        Turn your ideas into AI-generated videos.
+      </p>
+
+      <button onclick="openTool('AI Video Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card video">
+
+      <div class="icon">🎞️</div>
+
+      <span class="tag">VIDEO</span>
+
+      <h3>AI Video Editor</h3>
+
+      <p>
+        Edit videos with intelligent AI tools.
+      </p>
+
+      <button onclick="openTool('AI Video Editor')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card video">
+
+      <div class="icon">▶️</div>
+
+      <span class="tag">VIDEO</span>
+
+      <h3>YouTube Thumbnail</h3>
+
+      <p>
+        Create attractive YouTube thumbnails.
+      </p>
+
+      <button onclick="openTool('YouTube Thumbnail')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card video">
+
+      <div class="icon">📺</div>
+
+      <span class="tag">VIDEO</span>
+
+      <h3>Short Video Maker</h3>
+
+      <p>
+        Create short-form videos for social media.
+      </p>
+
+      <button onclick="openTool('Short Video Maker')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <!-- AUDIO -->
+
+    <div class="tool-card audio">
+
+      <div class="icon">🎧</div>
+
+      <span class="tag">AUDIO</span>
+
+      <h3>AI Voice Generator</h3>
+
+      <p>
+        Convert text into natural AI voices.
+      </p>
+
+      <button onclick="openTool('AI Voice Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card audio">
+
+      <div class="icon">🎵</div>
+
+      <span class="tag">AUDIO</span>
+
+      <h3>AI Music Generator</h3>
+
+      <p>
+        Generate original music using AI.
+      </p>
+
+      <button onclick="openTool('AI Music Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card audio">
+
+      <div class="icon">🎙️</div>
+
+      <span class="tag">AUDIO</span>
+
+      <h3>Audio Transcriber</h3>
+
+      <p>
+        Convert speech and audio into text.
+      </p>
+
+      <button onclick="openTool('Audio Transcriber')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <!-- BUSINESS -->
+
+    <div class="tool-card business">
+
+      <div class="icon">💼</div>
+
+      <span class="tag">BUSINESS</span>
+
+      <h3>Business Name Generator</h3>
+
+      <p>
+        Find creative names for your business.
+      </p>
+
+      <button onclick="openTool('Business Name Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card business">
+
+      <div class="icon">💳</div>
+
+      <span class="tag">BUSINESS</span>
+
+      <h3>Visiting Card Maker</h3>
+
+      <p>
+        Create professional business cards.
+      </p>
+
+      <button onclick="openTool('Visiting Card Maker')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card business">
+
+      <div class="icon">📊</div>
+
+      <span class="tag">BUSINESS</span>
+
+      <h3>Business Plan Generator</h3>
+
+      <p>
+        Generate structured business plans.
+      </p>
+
+      <button onclick="openTool('Business Plan Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <!-- MARKETING -->
+
+    <div class="tool-card marketing">
+
+      <div class="icon">📢</div>
+
+      <span class="tag">MARKETING</span>
+
+      <h3>Ad Copy Generator</h3>
+
+      <p>
+        Generate advertising copy for your campaigns.
+      </p>
+
+      <button onclick="openTool('Ad Copy Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card marketing">
+
+      <div class="icon">📱</div>
+
+      <span class="tag">MARKETING</span>
+
+      <h3>Social Media Caption</h3>
+
+      <p>
+        Generate engaging captions and hashtags.
+      </p>
+
+      <button onclick="openTool('Social Media Caption')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card marketing">
+
+      <div class="icon">🧲</div>
+
+      <span class="tag">MARKETING</span>
+
+      <h3>Product Description</h3>
+
+      <p>
+        Write descriptions that sell products.
+      </p>
+
+      <button onclick="openTool('Product Description')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <!-- CODE -->
+
+    <div class="tool-card code">
+
+      <div class="icon">💻</div>
+
+      <span class="tag">CODING</span>
+
+      <h3>AI Code Generator</h3>
+
+      <p>
+        Generate code from natural language.
+      </p>
+
+      <button onclick="openTool('AI Code Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card code">
+
+      <div class="icon">🐞</div>
+
+      <span class="tag">CODING</span>
+
+      <h3>AI Debugger</h3>
+
+      <p>
+        Find and explain programming errors.
+      </p>
+
+      <button onclick="openTool('AI Debugger')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card code">
+
+      <div class="icon">📚</div>
+
+      <span class="tag">CODING</span>
+
+      <h3>Code Explainer</h3>
+
+      <p>
+        Understand difficult code in simple language.
+      </p>
+
+      <button onclick="openTool('Code Explainer')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <!-- EDUCATION -->
+
+    <div class="tool-card education">
+
+      <div class="icon">🎓</div>
+
+      <span class="tag">EDUCATION</span>
+
+      <h3>AI Study Assistant</h3>
+
+      <p>
+        Learn topics and get explanations with AI.
+      </p>
+
+      <button onclick="openTool('AI Study Assistant')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card education">
+
+      <div class="icon">📝</div>
+
+      <span class="tag">EDUCATION</span>
+
+      <h3>Quiz Generator</h3>
+
+      <p>
+        Create quizzes from your study material.
+      </p>
+
+      <button onclick="openTool('Quiz Generator')">
+        Open Tool →
+      </button>
+
+    </div>
+
+
+    <div class="tool-card education">
+
+      <div class="icon">📖</div>
+
+      <span class="tag">EDUCATION</span>
+
+      <h3>Essay Writer</h3>
+
+      <p>
+        Generate structured essays and assignments.
+      </p>
+
+      <button onclick="openTool('Essay Writer')">
+        Open Tool →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="generator">
+
+  <div class="generator-box">
+
+    <div class="generator-form">
+
+      <span>AI TOOL</span>
+
+      <h2 id="toolTitle">
+        AI Image Generator
+      </h2>
+
+      <label>What do you want to create?</label>
+
+      <textarea
+        id="prompt"
+        placeholder="Describe your idea..."
+      ></textarea>
+
+      <button
+        class="generate"
+        onclick="generate()"
+      >
+        ✨ Generate
+      </button>
+
+    </div>
+
+
+    <div class="result">
+
+      <div class="result-icon">
+        ✦
+      </div>
+
+      <h3 id="resultTitle">
+        Your result appears here
+      </h3>
+
+      <p id="resultText">
+        Select an AI tool and enter your idea.
+      </p>
+
+      <div
+        id="loading"
+        class="loading"
+      >
+        Generating...
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="pricing" id="pricing">
+
+  <div class="section-title center">
+
+    <span>PRICING</span>
+
+    <h2>Simple AI credits</h2>
+
+    <p>
+      Users can purchase credits and use AI tools.
+    </p>
+
+  </div>
+
+
+  <div class="pricing-grid">
+
+    <div class="price-card">
+
+      <h3>Starter</h3>
+
+      <strong>₹49</strong>
+
+      <p>10 AI Credits</p>
+
+      <button onclick="buy(10)">
+        Buy Credits
+      </button>
+
+    </div>
+
+
+    <div class="price-card featured">
+
+      <small>POPULAR</small>
+
+      <h3>Creator</h3>
+
+      <strong>₹99</strong>
+
+      <p>25 AI Credits</p>
+
+      <button onclick="buy(25)">
+        Buy Credits
+      </button>
+
+    </div>
+
+
+    <div class="price-card">
+
+      <h3>Pro</h3>
+
+      <strong>₹199</strong>
+
+      <p>60 AI Credits</p>
+
+      <button onclick="buy(60)">
+        Buy Credits
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="footer-logo">
+    ✦ NovaAI
+  </div>
+
+  <p>
+    One platform. Many AI tools.
+  </p>
+
+  <small>
+    © 2026 NovaAI — AI Tools Platform
+  </small>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
